@@ -2,31 +2,33 @@
 from scapy import sendrecv
 from scapy.layers import inet6
 from scapy.layers.l2 import Ether
-from scapy.layers.inet6 import IPv6 #,ICMPv6MLReport_MLDv2 
+#from scapy.layers.inet6 import IPv6,ICMPv6MLReport_MLDv2 
 from scapy.packet import Packet
 import data 
 #import threading
 
 if __name__ == '__main__':
     src = "fe80::200:ff:fe00:1"
-    dst = "fe80::200:ff:fe00:2"
+    dst = "ff02::1:ff00:2"
     srcip = "11::"
     dstip= "::11"
 #    fe80::d63d:7eff:fe4a:460c #self
 #    fe80::200:ff:fe00:1 #mininet h1
 #    fe80::200:ff:fe00:2 #mininet h2
+#    ff02::1:ff00:2 (ff02::1:ff00:2)
 #    ICMPv6MLReport_MLDv2()
 #    sendpkt = Packet()
 #    sendpkt = IPv6(dst="ff38::1")/ICMPv6MLReport_MLDv2(sendpkt)
     e=Ether()
     e.dst=dst
     e.src=src
-#    e.type='0x8100'
-    i=IPv6()
+    e.type=data.ETH_P_IPV6
+    i=inet6.IPv6()
+    i.tc=data.IPV6_ADDR_MULTICAST
     i.src=src
     i.dst=dst
-#    h=ICMPv6MLReport_MLDv2()
-#    h.addresses=[srcip,dstip]
+    #h=inet6.ICMPv6MLReport_MLDv2()
+    #h.addresses=[srcip,dstip]
     """
     fields_desc = [ ByteEnumField("type", 130, icmp6types),
                     ByteField("code", 0),
@@ -35,7 +37,7 @@ if __name__ == '__main__':
                     ShortField("reserved", 0),
                     IP6Field("mladdr",None)]
     """
-    sendpkt=e/i
+    sendpkt=e/i/h
     #sendpkt=e/i/h
 #    sendpkt=(i/h)
 #    e = ethernet.ethernet(ethertype='0x8100', dst=dst, src=src)
