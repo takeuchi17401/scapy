@@ -27,6 +27,8 @@ if not hasattr(socket, "IPPROTO_IPV6"):
     # Workaround for http://bugs.python.org/issue6926
     socket.IPPROTO_IPV6 = 41
 
+import scapy.route6
+import scapy.route
 from scapy.config import conf
 from scapy.layers.l2 import *
 from scapy.layers.inet import *
@@ -1092,7 +1094,7 @@ icmp6typescls = {    1: "ICMPv6DestUnreach",
                    140: "ICMPv6NIReply",
                    141: "ICMPv6ND_INDSol",
                    142: "ICMPv6ND_INDAdv",
-                   143: "ICMPv6MLReport_MLDv2", # - RFC 3810
+                   143: "ICMPv6MLQuery_MLDv2", # - RFC 3810
                    144: "ICMPv6HAADRequest", 
                    145: "ICMPv6HAADReply",
                    146: "ICMPv6MPSol",
@@ -1275,21 +1277,40 @@ class ICMPv6MLQuery(_ICMPv6ML): # RFC 2710
             return struct.pack("HH",self.mladdr)+self.payload.hashret()
         else:
             return self.payload.hashret()
-        
-    
+
+# general queries are sent to the link-scope all-nodes multicast
+# address ff02::1, with a multicast address field of 0 and a MRD of
+# [Query Response Interval]
+# Default value for mladdr is set to 0 for a General Query, and
+# overloaded by the user for a Multicast Address specific query
+# TODO : See what we can do to automatically include a Router Alert
+#        Option in a Destination Option Header.
+class ICMPv6MLQuery_MLDv2(_ICMPv6ML):
+    name = "MLD - Multicast Listener Query"
+    type   = 143
+    mrd    = 10000
+    mladdr = "::" # 10s for mrd
+    overload_fields = {IPv6: { "dst": "ff02::1", "hlim": 1 }} 
+    def hashret(self):
+        if self.mladdr != "::":
+            return struct.pack("HH",self.mladdr)+self.payload.hashret()
+        else:
+            return self.payload.hashret()
+
 # TODO : See what we can do to automatically include a Router Alert
 #        Option in a Destination Option Header.
 class ICMPv6MLReport(_ICMPv6ML): # RFC 2710
     name = "MLD - Multicast Listener Report"
     type = 131
-    overload_fields = {IPv6: {"hlim": 1}}
-    # implementer le hashret et le answers
-
-# TODO : See what we can do to automatically include a Router Alert
-#        Option in a Destination Option Header.
-class ICMPv6MLReport_MLDv2(_ICMPv6ML): # RFC 3810
-    name = "MLD - Multicast Listener Report"
-    type = 131
+    mladdr = "::" # 10s for mrd
+    
+    fields_desc = [ ByteEnumField("type", 130, icmp6types),
+                    ByteField("code", 0),
+                    XShortField("cksum", None),
+                    ShortField("mrd", 0),
+                    ShortField("reserved", 0),
+                    IP6Field("mladdr",None)]
+    
     overload_fields = {IPv6: {"hlim": 1}}
     # implementer le hashret et le answers
     def hashret(self):
@@ -2698,9 +2719,9 @@ class MIP6MH_HoT(_MobilityHeader):
     def hashret(self):
         return self.cookie
     def answers(self):
-        if (isinstance(other, MIP6MH_HoTI) and
-            self.cookie == other.cookie):
-            return 1
+#        if (isinstance(other, MIP6MH_HoTI) and
+#            self.cookie == other.cookie):
+#            return 1
         return 0
 
 class MIP6MH_CoT(MIP6MH_HoT):
@@ -2710,9 +2731,9 @@ class MIP6MH_CoT(MIP6MH_HoT):
         return self.cookie
 
     def answers(self):
-        if (isinstance(other, MIP6MH_CoTI) and
-            self.cookie == other.cookie):
-            return 1
+#        if (isinstance(other, MIP6MH_CoTI) and
+#            self.cookie == other.cookie):
+#            return 1
         return 0
 
 class LifetimeField(ShortField):
