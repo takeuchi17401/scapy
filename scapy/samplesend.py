@@ -1,11 +1,21 @@
-# -*- coding: utf-8 -*-
-from scapy import sendrecv
-from scapy.layers import inet6
-from scapy.layers.l2 import Ether
-#from scapy.layers.inet6 import IPv6,ICMPv6MLReport_MLDv2 
+# samplesend.py
+from scapy import *
+from scapy.all import *
+from scapy.config import conf
+from scapy.layers.l2 import *
+from scapy.layers.inet import *
+from scapy.fields import *
+from scapy.packet import *
+from scapy.volatile import *
+from scapy.sendrecv import sr,sr1,srp1
+from scapy.as_resolvers import AS_resolver_riswhois
+from scapy.supersocket import SuperSocket,L3RawSocket
+from scapy.arch import *
+from scapy.utils6 import *
+from scapy.layers.inet6 import *
 from scapy.packet import Packet
+from scapy.layers import inet6
 import data 
-#import threading
 
 if __name__ == '__main__':
     src = "fe80::200:ff:fe00:1"
@@ -17,43 +27,28 @@ if __name__ == '__main__':
 #    fe80::200:ff:fe00:2 #mininet h2
 #    ff02::1:ff00:2 (ff02::1:ff00:2)
 #    ICMPv6MLReport_MLDv2()
-#    sendpkt = Packet()
-#    sendpkt = IPv6(dst="ff38::1")/ICMPv6MLReport_MLDv2(sendpkt)
-    e=Ether()
-    e.dst=dst
-    e.src=src
-    e.type=data.ETH_P_IPV6
-    i=inet6.IPv6()
-    i.tc=data.IPV6_ADDR_MULTICAST
-    i.src=src
-    i.dst=dst
-    #h=inet6.ICMPv6MLReport_MLDv2()
-    #h.addresses=[srcip,dstip]
-    """
-    fields_desc = [ ByteEnumField("type", 130, icmp6types),
-                    ByteField("code", 0),
-                    XShortField("cksum", None),
-                    ShortField("mrd", 0),
-                    ShortField("reserved", 0),
-                    IP6Field("mladdr",None)]
-    """
-    sendpkt=e/i/h
-    #sendpkt=e/i/h
-#    sendpkt=(i/h)
-#    e = ethernet.ethernet(ethertype='0x8100', dst=dst, src=src)
-#    v = vlan.vlan(pcp=0, cfi=0, vid=100, ethertype='0x86dd')
-#    u = ipv6.ipv6(src=srcip, dst=dstip, nxt='58')
-#    c = icmpv6.icmpv6(type_='130',data=icmpv6.mldv2_query(address='ff38::1'))
+
+    #conf.verb = 0
+    conf.iface = "eth0"
+    #myMacAddr = get_if_hwaddr(conf.iface)
+    myMacAddr = "fe80::d63d:7eff:fe4a:460c"
     
-#    e = (ethertype='0x8100', dst=dst, src=src)
-#    v = (pcp=0, cfi=0, vid=100, ethertype='0x86dd'()
-#    u = (src=srcip, dst=dstip, nxt='58')
-#    p = (type_='130',data=icmpv6.mldv2_query(address='ff38::1')
-#    sendpkt = e/u/p
-
+    e = Ether()
+    e.dst = dst
+    e.src = src
+#    v = vlan.vlan(pcp=0, cfi=0, vid=100, ethertype='0x86dd')
+    u = IPv6()
+    u.src=srcip
+    u.dst=dstip
+    u.payload = "Hello world"
+    c = ICMPv6MLQuery()
+    c.mladdr='ff38::1'
+    sendpkt=e/u/c
+    
+#    sendpkt=Ether()/IPv6()/ICMPv6MLQuery()
+#    sendpkt=Ether()/IPv6()/ICMPv6MLQuery_MLDv2()
+    
     print ('sendpkt %s', sendpkt)
-    inet6.send(sendpkt)
-    #inet6.sndrcv(sendpkt)
-    #sendrecv(sendpkt)
-#    inet6.send(sendpkt)
-
+#    send(sendpkt)
+#    sendp(x=sendpkt, iface=myMacAddr)
+    sendp(x=sendpkt)

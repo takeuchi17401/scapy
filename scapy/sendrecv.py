@@ -208,6 +208,9 @@ def __gen_send(s, x, inter=0, loop=0, count=None, verbose=None, realtime=None, *
         x = Raw(load=x)
     if not isinstance(x, Gen):
         x = SetGen(x)
+        
+    print "\nS %s X %s" % s, x
+    
     if verbose is None:
         verbose = conf.verb
     n = 0
@@ -244,6 +247,7 @@ def __gen_send(s, x, inter=0, loop=0, count=None, verbose=None, realtime=None, *
 def send(x, inter=0, loop=0, count=None, verbose=None, realtime=None, *args, **kargs):
     """Send packets at layer 3
 send(packets, [inter=0], [loop=0], [verbose=conf.verb]) -> None"""
+#    print ("TEST x %s" % x)
     __gen_send(conf.L3socket(*args, **kargs), x, inter=inter, loop=loop, count=count,verbose=verbose, realtime=realtime)
 
 @conf.commands.register
