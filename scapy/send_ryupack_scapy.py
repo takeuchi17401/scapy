@@ -7,12 +7,13 @@ dst = "66:55:44:33:22:11"
 srcip = "11::"
 dstip= "::11"
 
-
+"""
 ## ICMPV6_ECHO_REQUEST = 128 ##
 eth = ethernet.ethernet(ethertype=ether.ETH_TYPE_IPV6)
 ip6 = ipv6.ipv6(dst=dstip, src=srcip, nxt=inet.IPPROTO_ICMPV6)
 mld = icmpv6.icmpv6(type_=icmpv6.ICMPV6_ECHO_REQUEST, data=icmpv6.mldv2_report())
 ryu_pkt = eth / ip6 / mld
+"""
 
 """
 ## ICMPV6_ECHO_REPLY = 129 ##
@@ -30,6 +31,12 @@ ip6 = ipv6.ipv6(dst="::1", src="::1", nxt=58)
 mld = icmpv6.icmpv6(type_=icmpv6.ICMPV6_MEMBERSHIP_QUERY, data=icmpv6.mldv2_query())
 ryu_pkt = eth /vln /ip6 /mld
 """
+
+## MLDV2_LISTENER_REPORT = 143 ##
+eth = ethernet.ethernet(ethertype=ether.ETH_TYPE_IPV6)
+ip6 = ipv6.ipv6(dst=dstip, src=srcip, nxt=inet.IPPROTO_ICMPV6)
+mld = icmpv6.icmpv6(type_=icmpv6.MLDV2_LISTENER_REPORT, data=icmpv6.mldv2_report())
+ryu_pkt = eth / ip6 / mld
 
 ryu_pkt.serialize()
 
