@@ -33,10 +33,11 @@ ryu_pkt = eth /vln /ip6 /mld
 """
 
 ## MLDV2_LISTENER_REPORT = 143 ##
-eth = ethernet.ethernet(ethertype=ether.ETH_TYPE_IPV6)
+eth = ethernet.ethernet(ethertype=ether.ETH_TYPE_8021Q)
+vln = vlan.vlan(ethertype=ether.ETH_TYPE_IPV6)
 ip6 = ipv6.ipv6(dst=dstip, src=srcip, nxt=inet.IPPROTO_ICMPV6)
 mld = icmpv6.icmpv6(type_=icmpv6.MLDV2_LISTENER_REPORT, data=icmpv6.mldv2_report())
-ryu_pkt = eth / ip6 / mld
+ryu_pkt = eth / vln / ip6 / mld
 
 ryu_pkt.serialize()
 
