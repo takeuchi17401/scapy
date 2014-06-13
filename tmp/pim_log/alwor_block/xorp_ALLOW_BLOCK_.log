@@ -1,0 +1,422 @@
+[ 2014/06/13 15:30:55.867503 TRACE xorp_rtrmgr RTRMGR ] Configuration fil          := ./xorp.cfg
+[ 2014/06/13 15:30:55.867608 TRACE xorp_rtrmgr RTRMGR ] Module directory           := /usr/lib/xorp/sbin
+[ 2014/06/13 15:30:55.867625 TRACE xorp_rtrmgr RTRMGR ] Command directory          := /usr/lib/xorp/bin
+[ 2014/06/13 15:30:55.867637 TRACE xorp_rtrmgr RTRMGR ] Templates directory        := /usr/share/xorp/templates
+[ 2014/06/13 15:30:55.867650 TRACE xorp_rtrmgr RTRMGR ] Execute Xrls               := true
+[ 2014/06/13 15:30:55.867661 TRACE xorp_rtrmgr RTRMGR ] Restart failed processes   := false
+[ 2014/06/13 15:30:55.867672 TRACE xorp_rtrmgr RTRMGR ] Print verbose information  := true
+[ 2014/06/13 15:30:55.894701  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/master_conf_tree.cc:257 execute ] Changed modules: fea, interfaces, mfea6, mld, rib, pimsm6, policy, fib2mrib
+[ 2014/06/13 15:30:55.895213 TRACE xorp_rtrmgr RTRMGR ] New module: fea (xorp_fea)
+[ 2014/06/13 15:30:55.895224  WARNING xorp_rtrmgr:28519 RTRMGR rtrmgr/module_command.cc:327 startup_validation ] WARNING:  Using DelayValidation, module_name: fea
+[ 2014/06/13 15:30:55.895236 TRACE xorp_rtrmgr RTRMGR ] New module: interfaces (xorp_fea)
+[ 2014/06/13 15:30:55.895245 TRACE xorp_rtrmgr RTRMGR ] New module: mfea6 (xorp_fea)
+[ 2014/06/13 15:30:55.895254 TRACE xorp_rtrmgr RTRMGR ] New module: mld (xorp_mld)
+[ 2014/06/13 15:30:55.895262 TRACE xorp_rtrmgr RTRMGR ] New module: rib (xorp_rib)
+[ 2014/06/13 15:30:55.895271 TRACE xorp_rtrmgr RTRMGR ] New module: pimsm6 (xorp_pimsm6)
+[ 2014/06/13 15:30:55.895279 TRACE xorp_rtrmgr RTRMGR ] New module: policy (xorp_policy)
+[ 2014/06/13 15:30:55.895290 TRACE xorp_rtrmgr RTRMGR ] New module: fib2mrib (xorp_fib2mrib)
+[ 2014/06/13 15:30:55.895536  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:100 execute ] Executing module: fea (xorp_fea)
+[ 2014/06/13 15:30:57.896399 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://fea/common/0.1/get_status<
+[ 2014/06/13 15:30:57.897401 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(fea.targetname)/fti/0.2/set_unicast_forwarding_enabled6?enabled:bool=`~$(@)`
+[ 2014/06/13 15:30:57.897499 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://fea/fti/0.2/set_unicast_forwarding_enabled6?enabled:bool=true<
+[ 2014/06/13 15:30:57.897978  INFO xorp_fea:28520 MFEA fea/mfea_node.cc:317 enable ] MFEA enabled
+[ 2014/06/13 15:30:57.898068  INFO xorp_fea:28520 MFEA fea/mfea_node_cli.cc:126 enable ] CLI enabled
+[ 2014/06/13 15:30:57.898220  INFO xorp_fea:28520 MFEA fea/mfea_node_cli.cc:92 start ] CLI started
+[ 2014/06/13 15:30:57.898239  INFO xorp_fea:28520 MFEA fea/mfea_node.cc:317 enable ] MFEA enabled
+[ 2014/06/13 15:30:57.898249  INFO xorp_fea:28520 MFEA fea/mfea_node_cli.cc:126 enable ] CLI enabled
+[ 2014/06/13 15:30:57.898310  INFO xorp_fea:28520 MFEA fea/mfea_node_cli.cc:92 start ] CLI started
+[ 2014/06/13 15:30:57.898647 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://fea/common/0.1/get_status<
+[ 2014/06/13 15:30:57.899001  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:100 execute ] Executing module: interfaces (xorp_fea)
+[ 2014/06/13 15:30:57.899060 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://fea/common/0.1/get_status<
+[ 2014/06/13 15:30:57.899850 TRACE xorp_rtrmgr RTRMGR ] Startup with XRL: >finder://fea/ifmgr/0.1/startup_ifmgr<
+[ 2014/06/13 15:30:57.900333 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://fea/common/0.1/get_status<
+[ 2014/06/13 15:30:57.900600 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(interfaces.targetname)/ifmgr/0.1/start_transaction->tid:u32=$(interfaces.TID)
+[ 2014/06/13 15:30:57.900666 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://fea/ifmgr/0.1/start_transaction<
+[ 2014/06/13 15:30:57.901184 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(interfaces.targetname)/ifmgr/0.1/set_restore_original_config_on_shutdown?enable:bool=$(@)
+[ 2014/06/13 15:30:57.901249 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://fea/ifmgr/0.1/set_restore_original_config_on_shutdown?enable:bool=false<
+[ 2014/06/13 15:30:57.901726 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(interfaces.targetname)/ifmgr/0.1/create_interface?tid:u32=$(interfaces.TID)&ifname:txt=$(@)
+[ 2014/06/13 15:30:57.901852 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://fea/ifmgr/0.1/create_interface?tid:u32=272802&ifname:txt=r1-eth0<
+[ 2014/06/13 15:30:57.902396 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(interfaces.targetname)/ifmgr/0.1/set_interface_enabled?tid:u32=$(interfaces.TID)&ifname:txt=$(interface.@)&enabled:bool=`~$(@)`
+[ 2014/06/13 15:30:57.902529 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://fea/ifmgr/0.1/set_interface_enabled?tid:u32=272802&ifname:txt=r1-eth0&enabled:bool=true<
+[ 2014/06/13 15:30:57.903044 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(interfaces.targetname)/ifmgr/0.1/set_interface_discard?tid:u32=$(interfaces.TID)&ifname:txt=$(interface.@)&discard:bool=$(@)
+[ 2014/06/13 15:30:57.903173 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://fea/ifmgr/0.1/set_interface_discard?tid:u32=272802&ifname:txt=r1-eth0&discard:bool=false<
+[ 2014/06/13 15:30:57.903684 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(interfaces.targetname)/ifmgr/0.1/set_interface_unreachable?tid:u32=$(interfaces.TID)&ifname:txt=$(interface.@)&unreachable:bool=$(@)
+[ 2014/06/13 15:30:57.903816 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://fea/ifmgr/0.1/set_interface_unreachable?tid:u32=272802&ifname:txt=r1-eth0&unreachable:bool=false<
+[ 2014/06/13 15:30:57.904300 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(interfaces.targetname)/ifmgr/0.1/set_interface_management?tid:u32=$(interfaces.TID)&ifname:txt=$(interface.@)&management:bool=$(@)
+[ 2014/06/13 15:30:57.904452 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://fea/ifmgr/0.1/set_interface_management?tid:u32=272802&ifname:txt=r1-eth0&management:bool=false<
+[ 2014/06/13 15:30:57.904967 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(interfaces.targetname)/ifmgr/0.1/set_parent_ifname?tid:u32=$(interfaces.TID)&ifname:txt=$(interface.@)&parent_ifname:txt=$(@)
+[ 2014/06/13 15:30:57.905096 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://fea/ifmgr/0.1/set_parent_ifname?tid:u32=272802&ifname:txt=r1-eth0&parent_ifname:txt=<
+[ 2014/06/13 15:30:57.905555 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(interfaces.targetname)/ifmgr/0.1/set_iface_type?tid:u32=$(interfaces.TID)&ifname:txt=$(interface.@)&iface_type:txt=$(@)
+[ 2014/06/13 15:30:57.905659 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://fea/ifmgr/0.1/set_iface_type?tid:u32=272802&ifname:txt=r1-eth0&iface_type:txt=<
+[ 2014/06/13 15:30:57.906083 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(interfaces.targetname)/ifmgr/0.1/set_vid?tid:u32=$(interfaces.TID)&ifname:txt=$(interface.@)&vid:txt=$(@)
+[ 2014/06/13 15:30:57.906183 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://fea/ifmgr/0.1/set_vid?tid:u32=272802&ifname:txt=r1-eth0&vid:txt=<
+[ 2014/06/13 15:30:57.906605 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(interfaces.targetname)/ifmgr/0.1/configure_interface_from_system?tid:u32=$(interfaces.TID)&ifname:txt=$(interface.@)&enable:bool=true
+[ 2014/06/13 15:30:57.906709 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://fea/ifmgr/0.1/configure_interface_from_system?tid:u32=272802&ifname:txt=r1-eth0&enable:bool=true<
+[ 2014/06/13 15:30:57.907125 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(interfaces.targetname)/ifmgr/0.1/create_interface?tid:u32=$(interfaces.TID)&ifname:txt=$(@)
+[ 2014/06/13 15:30:57.907207 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://fea/ifmgr/0.1/create_interface?tid:u32=272802&ifname:txt=r1-eth1<
+[ 2014/06/13 15:30:57.907366 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(interfaces.targetname)/ifmgr/0.1/set_interface_enabled?tid:u32=$(interfaces.TID)&ifname:txt=$(interface.@)&enabled:bool=`~$(@)`
+[ 2014/06/13 15:30:57.907464 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://fea/ifmgr/0.1/set_interface_enabled?tid:u32=272802&ifname:txt=r1-eth1&enabled:bool=true<
+[ 2014/06/13 15:30:57.907621 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(interfaces.targetname)/ifmgr/0.1/set_interface_discard?tid:u32=$(interfaces.TID)&ifname:txt=$(interface.@)&discard:bool=$(@)
+[ 2014/06/13 15:30:57.907715 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://fea/ifmgr/0.1/set_interface_discard?tid:u32=272802&ifname:txt=r1-eth1&discard:bool=false<
+[ 2014/06/13 15:30:57.907881 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(interfaces.targetname)/ifmgr/0.1/set_interface_unreachable?tid:u32=$(interfaces.TID)&ifname:txt=$(interface.@)&unreachable:bool=$(@)
+[ 2014/06/13 15:30:57.907976 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://fea/ifmgr/0.1/set_interface_unreachable?tid:u32=272802&ifname:txt=r1-eth1&unreachable:bool=false<
+[ 2014/06/13 15:30:57.908213 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(interfaces.targetname)/ifmgr/0.1/set_interface_management?tid:u32=$(interfaces.TID)&ifname:txt=$(interface.@)&management:bool=$(@)
+[ 2014/06/13 15:30:57.908346 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://fea/ifmgr/0.1/set_interface_management?tid:u32=272802&ifname:txt=r1-eth1&management:bool=false<
+[ 2014/06/13 15:30:57.908562 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(interfaces.targetname)/ifmgr/0.1/set_parent_ifname?tid:u32=$(interfaces.TID)&ifname:txt=$(interface.@)&parent_ifname:txt=$(@)
+[ 2014/06/13 15:30:57.908690 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://fea/ifmgr/0.1/set_parent_ifname?tid:u32=272802&ifname:txt=r1-eth1&parent_ifname:txt=<
+[ 2014/06/13 15:30:57.908916 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(interfaces.targetname)/ifmgr/0.1/set_iface_type?tid:u32=$(interfaces.TID)&ifname:txt=$(interface.@)&iface_type:txt=$(@)
+[ 2014/06/13 15:30:57.909044 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://fea/ifmgr/0.1/set_iface_type?tid:u32=272802&ifname:txt=r1-eth1&iface_type:txt=<
+[ 2014/06/13 15:30:57.909246 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(interfaces.targetname)/ifmgr/0.1/set_vid?tid:u32=$(interfaces.TID)&ifname:txt=$(interface.@)&vid:txt=$(@)
+[ 2014/06/13 15:30:57.909372 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://fea/ifmgr/0.1/set_vid?tid:u32=272802&ifname:txt=r1-eth1&vid:txt=<
+[ 2014/06/13 15:30:57.909603 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(interfaces.targetname)/ifmgr/0.1/configure_interface_from_system?tid:u32=$(interfaces.TID)&ifname:txt=$(interface.@)&enable:bool=true
+[ 2014/06/13 15:30:57.909733 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://fea/ifmgr/0.1/configure_interface_from_system?tid:u32=272802&ifname:txt=r1-eth1&enable:bool=true<
+[ 2014/06/13 15:30:57.909959 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(interfaces.targetname)/ifmgr/0.1/commit_transaction?tid:u32=$(interfaces.TID)
+[ 2014/06/13 15:30:57.910054 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://fea/ifmgr/0.1/commit_transaction?tid:u32=272802<
+[ 2014/06/13 15:30:57.910607  WARNING xorp_fea:28520 FEA fea/data_plane/ifconfig/ifconfig_get_netlink_socket.cc:138 try_read_config_one ] NOTE:  Netlink get single network device works on this system.
+[ 2014/06/13 15:30:57.911275 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://fea/common/0.1/get_status<
+[ 2014/06/13 15:30:57.911515  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:100 execute ] Executing module: mfea6 (xorp_fea)
+[ 2014/06/13 15:30:57.911589 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://MFEA_6/common/0.1/get_status<
+[ 2014/06/13 15:30:57.912316 TRACE xorp_rtrmgr RTRMGR ] Startup with XRL: >finder://MFEA_6/common/0.1/startup<
+[ 2014/06/13 15:30:57.912938  INFO xorp_fea:28520 MFEA fea/mfea_node.cc:940 add_vif ] Interface added: Vif[r1-eth0] pif_index: 334 vif_index: 0 addr: 2001::1 subnet: 2001::/64 broadcast: :: peer: :: addr: fe80::283d:bcff:fee4:3727 subnet: fe80::/64 broadcast: :: peer: :: Flags: MULTICAST BROADCAST UNDERLYING_VIF_UP MTU: 1500
+[ 2014/06/13 15:30:57.912995  INFO xorp_fea:28520 MFEA fea/mfea_node.cc:940 add_vif ] Interface added: Vif[r1-eth1] pif_index: 345 vif_index: 1 addr: 2002::1 subnet: 2002::/64 broadcast: :: peer: :: addr: fe80::4c8a:5ff:fe5c:fb63 subnet: fe80::/64 broadcast: :: peer: :: Flags: MULTICAST BROADCAST UNDERLYING_VIF_UP MTU: 1500
+[ 2014/06/13 15:30:57.913074  WARNING xorp_fea:28520 FEA fea/data_plane/io/io_ip_socket.cc:310 IoIpSocket ] Registering with iftree: pushed-config
+[ 2014/06/13 15:30:57.913145  INFO xorp_fea:28520 MFEA fea/mfea_mrouter.cc:901 start_mrt ] NOTE: MROUTE:  setsockopt(MRT6_TABLE, 254) works!  Supports multiple mcast-6 routing tables.
+[ 2014/06/13 15:30:57.913174  INFO xorp_fea:28520 MFEA fea/mfea_node.cc:217 final_start ] MFEA started
+[ 2014/06/13 15:30:57.913271 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://MFEA_6/common/0.1/get_status<
+[ 2014/06/13 15:30:57.913496 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(mfea6.targetname)/mfea/0.1/enable_vif?vif_name:txt=$(vif.@)&enable:bool=`~$(@)`
+[ 2014/06/13 15:30:57.913588 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://MFEA_6/mfea/0.1/enable_vif?vif_name:txt=r1-eth0&enable:bool=true<
+[ 2014/06/13 15:30:57.914037  INFO xorp_fea:28520 MFEA fea/mfea_vif.cc:217 enable ] MfeaVif: Interface enable Vif[r1-eth0] pif_index: 334 vif_index: 0 addr: 2001::1 subnet: 2001::/64 broadcast: :: peer: :: addr: fe80::283d:bcff:fee4:3727 subnet: fe80::/64 broadcast: :: peer: :: Flags: MULTICAST BROADCAST UNDERLYING_VIF_UP MTU: 1500 DOWN IPv6 DISABLED
+[ 2014/06/13 15:30:57.914146 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(mfea6.targetname)/mfea/0.1/start_vif?vif_name:txt=$(vif.@)
+[ 2014/06/13 15:30:57.914218 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://MFEA_6/mfea/0.1/start_vif?vif_name:txt=r1-eth0<
+[ 2014/06/13 15:30:57.914635  INFO xorp_fea:28520 MFEA fea/mfea_vif.cc:136 start ] Interface started: Vif[r1-eth0] pif_index: 334 vif_index: 0 addr: 2001::1 subnet: 2001::/64 broadcast: :: peer: :: addr: fe80::283d:bcff:fee4:3727 subnet: fe80::/64 broadcast: :: peer: :: Flags: MULTICAST BROADCAST UNDERLYING_VIF_UP MTU: 1500 UP IPv6 ENABLED
+[ 2014/06/13 15:30:57.914699  INFO xorp_fea:28520 MFEA fea/mfea_node.cc:940 add_vif ] Interface added: Vif[register_vif] pif_index: 334 vif_index: 2 addr: 2001::1 subnet: 2001::1/128 broadcast: 2001::1 peer: :: addr: fe80::283d:bcff:fee4:3727 subnet: fe80::283d:bcff:fee4:3727/128 broadcast: fe80::283d:bcff:fee4:3727 peer: :: Flags: PIM_REGISTER UNDERLYING_VIF_UP MTU: 1500
+[ 2014/06/13 15:30:57.914852 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(mfea6.targetname)/mfea/0.1/enable_vif?vif_name:txt=$(vif.@)&enable:bool=`~$(@)`
+[ 2014/06/13 15:30:57.914939 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://MFEA_6/mfea/0.1/enable_vif?vif_name:txt=r1-eth1&enable:bool=true<
+[ 2014/06/13 15:30:57.915090  INFO xorp_fea:28520 MFEA fea/mfea_vif.cc:217 enable ] MfeaVif: Interface enable Vif[r1-eth1] pif_index: 345 vif_index: 1 addr: 2002::1 subnet: 2002::/64 broadcast: :: peer: :: addr: fe80::4c8a:5ff:fe5c:fb63 subnet: fe80::/64 broadcast: :: peer: :: Flags: MULTICAST BROADCAST UNDERLYING_VIF_UP MTU: 1500 DOWN IPv6 DISABLED
+[ 2014/06/13 15:30:57.915192 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(mfea6.targetname)/mfea/0.1/start_vif?vif_name:txt=$(vif.@)
+[ 2014/06/13 15:30:57.915260 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://MFEA_6/mfea/0.1/start_vif?vif_name:txt=r1-eth1<
+[ 2014/06/13 15:30:57.915387  INFO xorp_fea:28520 MFEA fea/mfea_vif.cc:136 start ] Interface started: Vif[r1-eth1] pif_index: 345 vif_index: 1 addr: 2002::1 subnet: 2002::/64 broadcast: :: peer: :: addr: fe80::4c8a:5ff:fe5c:fb63 subnet: fe80::/64 broadcast: :: peer: :: Flags: MULTICAST BROADCAST UNDERLYING_VIF_UP MTU: 1500 UP IPv6 ENABLED
+[ 2014/06/13 15:30:57.915481 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(mfea6.targetname)/mfea/0.1/enable_vif?vif_name:txt=$(vif.@)&enable:bool=`~$(@)`
+[ 2014/06/13 15:30:57.915559 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://MFEA_6/mfea/0.1/enable_vif?vif_name:txt=register_vif&enable:bool=true<
+[ 2014/06/13 15:30:57.915683  INFO xorp_fea:28520 MFEA fea/mfea_vif.cc:217 enable ] MfeaVif: Interface enable Vif[register_vif] pif_index: 334 vif_index: 2 addr: 2001::1 subnet: 2001::1/128 broadcast: 2001::1 peer: :: addr: fe80::283d:bcff:fee4:3727 subnet: fe80::283d:bcff:fee4:3727/128 broadcast: fe80::283d:bcff:fee4:3727 peer: :: Flags: PIM_REGISTER UNDERLYING_VIF_UP MTU: 1500 DOWN IPv6 DISABLED
+[ 2014/06/13 15:30:57.915775 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(mfea6.targetname)/mfea/0.1/start_vif?vif_name:txt=$(vif.@)
+[ 2014/06/13 15:30:57.915849 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://MFEA_6/mfea/0.1/start_vif?vif_name:txt=register_vif<
+[ 2014/06/13 15:30:57.917669  INFO xorp_fea:28520 MFEA fea/mfea_vif.cc:136 start ] Interface started: Vif[register_vif] pif_index: 334 vif_index: 2 addr: 2001::1 subnet: 2001::1/128 broadcast: 2001::1 peer: :: addr: fe80::283d:bcff:fee4:3727 subnet: fe80::283d:bcff:fee4:3727/128 broadcast: fe80::283d:bcff:fee4:3727 peer: :: Flags: PIM_REGISTER UNDERLYING_VIF_UP MTU: 1500 UP IPv6 ENABLED
+[ 2014/06/13 15:30:57.917821 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://MFEA_6/common/0.1/get_status<
+[ 2014/06/13 15:30:57.918043  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:100 execute ] Executing module: mld (xorp_mld)
+[ 2014/06/13 15:30:57.918424 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://MLD/common/0.1/get_status<
+[ 2014/06/13 15:30:57.918619  WARNING xorp_rtrmgr:28519 XrlFinderTarget obj/x86_64-unknown-linux-gnu/xrl/targets/finder_base.cc:482 handle_finder_0_2_resolve_xrl ] Handling method for finder/0.2/resolve_xrl failed: XrlCmdError 102 Command failed Target "MLD" does not exist or is not enabled.
+[ 2014/06/13 15:30:57.918754  WARNING xorp_rtrmgr:28519 RTRMGR rtrmgr/task.cc:215 xrl_done ] Failed to receive reply, code: 201 Resolve failed  retries: 0  max_retries: 30
+[ 2014/06/13 15:30:57.954361  INFO xorp_mld:28521 MLD6IGMP mld6igmp/mld6igmp_node.cc:264 enable ] Protocol enabled
+[ 2014/06/13 15:30:57.954480  INFO xorp_mld:28521 MLD6IGMP mld6igmp/mld6igmp_node_cli.cc:126 enable ] CLI enabled
+[ 2014/06/13 15:30:57.954634  INFO xorp_mld:28521 MLD6IGMP mld6igmp/mld6igmp_node_cli.cc:95 start ] CLI started
+[ 2014/06/13 15:30:58.919797 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://MLD/common/0.1/get_status<
+[ 2014/06/13 15:30:58.920344 TRACE xorp_rtrmgr RTRMGR ] Startup with XRL: >finder://MLD/common/0.1/startup<
+[ 2014/06/13 15:30:58.920978 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://MLD/common/0.1/get_status<
+[ 2014/06/13 15:30:58.972619  INFO xorp_mld:28521 MLD6IGMP mld6igmp/mld6igmp_node.cc:172 final_start ] Protocol started
+[ 2014/06/13 15:30:58.972888  INFO xorp_mld:28521 MLD6IGMP mld6igmp/mld6igmp_node.cc:710 add_vif ] mld6igmp: Interface added: Vif[r1-eth0] pif_index: 334 vif_index: 0 addr: 2001::1 subnet: 2001::/64 broadcast: :: peer: :: addr: fe80::283d:bcff:fee4:3727 subnet: fe80::/64 broadcast: :: peer: :: Flags: MULTICAST BROADCAST UNDERLYING_VIF_UP MTU: 1500
+[ 2014/06/13 15:30:58.972973  INFO xorp_mld:28521 MLD6IGMP mld6igmp/mld6igmp_node.cc:710 add_vif ] mld6igmp: Interface added: Vif[r1-eth1] pif_index: 345 vif_index: 1 addr: 2002::1 subnet: 2002::/64 broadcast: :: peer: :: addr: fe80::4c8a:5ff:fe5c:fb63 subnet: fe80::/64 broadcast: :: peer: :: Flags: MULTICAST BROADCAST UNDERLYING_VIF_UP MTU: 1500
+[ 2014/06/13 15:30:59.922311 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://MLD/common/0.1/get_status<
+[ 2014/06/13 15:30:59.922606 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(mld.targetname)/mld6igmp/0.1/enable_vif?vif_name:txt=$(vif.@)&enable:bool=`~$(@)`
+[ 2014/06/13 15:30:59.922715 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://MLD/mld6igmp/0.1/enable_vif?vif_name:txt=r1-eth0&enable:bool=true<
+[ 2014/06/13 15:30:59.923232  INFO xorp_mld:28521 MLD6IGMP mld6igmp/mld6igmp_vif.cc:429 enable ] Interface enabled: Vif[r1-eth0] pif_index: 334 vif_index: 0 addr: 2001::1 subnet: 2001::/64 broadcast: :: peer: :: addr: fe80::283d:bcff:fee4:3727 subnet: fe80::/64 broadcast: :: peer: :: Flags: MULTICAST BROADCAST UNDERLYING_VIF_UP MTU: 1500 DOWN IPv6 ENABLED
+[ 2014/06/13 15:30:59.923374 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(mld.targetname)/mld6igmp/0.1/set_vif_proto_version?vif_name:txt=$(vif.@)&proto_version:u32=$(@)
+[ 2014/06/13 15:30:59.923469 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://MLD/mld6igmp/0.1/set_vif_proto_version?vif_name:txt=r1-eth0&proto_version:u32=2<
+[ 2014/06/13 15:30:59.924012 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(mld.targetname)/mld6igmp/0.1/set_vif_ip_router_alert_option_check?vif_name:txt=$(vif.@)&enable:bool=$(@)
+[ 2014/06/13 15:30:59.924131 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://MLD/mld6igmp/0.1/set_vif_ip_router_alert_option_check?vif_name:txt=r1-eth0&enable:bool=false<
+[ 2014/06/13 15:30:59.924652 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(mld.targetname)/mld6igmp/0.1/set_vif_query_interval?vif_name:txt=$(vif.@)&interval_sec:u32=$(@)&interval_usec:u32=0
+[ 2014/06/13 15:30:59.924767 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://MLD/mld6igmp/0.1/set_vif_query_interval?vif_name:txt=r1-eth0&interval_sec:u32=15&interval_usec:u32=0<
+[ 2014/06/13 15:30:59.925317 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(mld.targetname)/mld6igmp/0.1/set_vif_query_last_member_interval?vif_name:txt=$(vif.@)&interval_sec:u32=$(@)&interval_usec:u32=0
+[ 2014/06/13 15:30:59.925432 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://MLD/mld6igmp/0.1/set_vif_query_last_member_interval?vif_name:txt=r1-eth0&interval_sec:u32=1&interval_usec:u32=0<
+[ 2014/06/13 15:30:59.925938 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(mld.targetname)/mld6igmp/0.1/set_vif_query_response_interval?vif_name:txt=$(vif.@)&interval_sec:u32=$(@)&interval_usec:u32=0
+[ 2014/06/13 15:30:59.926052 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://MLD/mld6igmp/0.1/set_vif_query_response_interval?vif_name:txt=r1-eth0&interval_sec:u32=10&interval_usec:u32=0<
+[ 2014/06/13 15:30:59.926563 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(mld.targetname)/mld6igmp/0.1/set_vif_robust_count?vif_name:txt=$(vif.@)&robust_count:u32=$(@)
+[ 2014/06/13 15:30:59.926668 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://MLD/mld6igmp/0.1/set_vif_robust_count?vif_name:txt=r1-eth0&robust_count:u32=2<
+[ 2014/06/13 15:30:59.927171 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(mld.targetname)/mld6igmp/0.1/start_vif?vif_name:txt=$(vif.@)
+[ 2014/06/13 15:30:59.927265 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://MLD/mld6igmp/0.1/start_vif?vif_name:txt=r1-eth0<
+[ 2014/06/13 15:30:59.927849  INFO xorp_mld:28521 MLD6IGMP mld6igmp/mld6igmp_vif.cc:314 start ] Interface started: Vif[r1-eth0] pif_index: 334 vif_index: 0 addr: 2001::1 subnet: 2001::/64 broadcast: :: peer: :: addr: fe80::283d:bcff:fee4:3727 subnet: fe80::/64 broadcast: :: peer: :: Flags: MULTICAST BROADCAST UNDERLYING_VIF_UP MTU: 1500 UP IPv6 ENABLED
+[ 2014/06/13 15:30:59.927986 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(mld.targetname)/mld6igmp/0.1/enable_vif?vif_name:txt=$(vif.@)&enable:bool=`~$(@)`
+[ 2014/06/13 15:30:59.928083 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://MLD/mld6igmp/0.1/enable_vif?vif_name:txt=r1-eth1&enable:bool=true<
+[ 2014/06/13 15:30:59.928258  INFO xorp_mld:28521 MLD6IGMP mld6igmp/mld6igmp_vif.cc:429 enable ] Interface enabled: Vif[r1-eth1] pif_index: 345 vif_index: 1 addr: 2002::1 subnet: 2002::/64 broadcast: :: peer: :: addr: fe80::4c8a:5ff:fe5c:fb63 subnet: fe80::/64 broadcast: :: peer: :: Flags: MULTICAST BROADCAST UNDERLYING_VIF_UP MTU: 1500 DOWN IPv6 ENABLED
+[ 2014/06/13 15:30:59.928333 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(mld.targetname)/mld6igmp/0.1/set_vif_proto_version?vif_name:txt=$(vif.@)&proto_version:u32=$(@)
+[ 2014/06/13 15:30:59.928426 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://MLD/mld6igmp/0.1/set_vif_proto_version?vif_name:txt=r1-eth1&proto_version:u32=2<
+[ 2014/06/13 15:30:59.928718 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(mld.targetname)/mld6igmp/0.1/set_vif_ip_router_alert_option_check?vif_name:txt=$(vif.@)&enable:bool=$(@)
+[ 2014/06/13 15:30:59.928825 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://MLD/mld6igmp/0.1/set_vif_ip_router_alert_option_check?vif_name:txt=r1-eth1&enable:bool=false<
+[ 2014/06/13 15:30:59.929112 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(mld.targetname)/mld6igmp/0.1/set_vif_query_interval?vif_name:txt=$(vif.@)&interval_sec:u32=$(@)&interval_usec:u32=0
+[ 2014/06/13 15:30:59.929203 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://MLD/mld6igmp/0.1/set_vif_query_interval?vif_name:txt=r1-eth1&interval_sec:u32=15&interval_usec:u32=0<
+[ 2014/06/13 15:30:59.929386 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(mld.targetname)/mld6igmp/0.1/set_vif_query_last_member_interval?vif_name:txt=$(vif.@)&interval_sec:u32=$(@)&interval_usec:u32=0
+[ 2014/06/13 15:30:59.929482 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://MLD/mld6igmp/0.1/set_vif_query_last_member_interval?vif_name:txt=r1-eth1&interval_sec:u32=1&interval_usec:u32=0<
+[ 2014/06/13 15:30:59.929816 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(mld.targetname)/mld6igmp/0.1/set_vif_query_response_interval?vif_name:txt=$(vif.@)&interval_sec:u32=$(@)&interval_usec:u32=0
+[ 2014/06/13 15:30:59.929931 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://MLD/mld6igmp/0.1/set_vif_query_response_interval?vif_name:txt=r1-eth1&interval_sec:u32=10&interval_usec:u32=0<
+[ 2014/06/13 15:30:59.929847  INFO xorp_fea:28520 FEA fea/data_plane/io/io_ip_socket.cc:878 findOrCreateInputSocket ] Successfully bound socket: 44 to interface: r1-eth0  input sockets size: 1
+[ 2014/06/13 15:30:59.929888  INFO xorp_fea:28520 FEA fea/data_plane/io/io_ip_socket.cc:636 join_multicast_group ] Joined IPv6 group: ff02::1 on interface r1-eth0 vif r1-eth0  socket: 44
+[ 2014/06/13 15:30:59.930111 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(mld.targetname)/mld6igmp/0.1/set_vif_robust_count?vif_name:txt=$(vif.@)&robust_count:u32=$(@)
+[ 2014/06/13 15:30:59.930191 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://MLD/mld6igmp/0.1/set_vif_robust_count?vif_name:txt=r1-eth1&robust_count:u32=2<
+[ 2014/06/13 15:30:59.930176  INFO xorp_fea:28520 FEA fea/data_plane/io/io_ip_socket.cc:636 join_multicast_group ] Joined IPv6 group: ff02::2 on interface r1-eth0 vif r1-eth0  socket: 44
+[ 2014/06/13 15:30:59.930428 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(mld.targetname)/mld6igmp/0.1/start_vif?vif_name:txt=$(vif.@)
+[ 2014/06/13 15:30:59.930520 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://MLD/mld6igmp/0.1/start_vif?vif_name:txt=r1-eth1<
+[ 2014/06/13 15:30:59.930423  INFO xorp_fea:28520 FEA fea/data_plane/io/io_ip_socket.cc:636 join_multicast_group ] Joined IPv6 group: ff02::16 on interface r1-eth0 vif r1-eth0  socket: 44
+[ 2014/06/13 15:30:59.930861 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://MLD/common/0.1/get_status<
+[ 2014/06/13 15:30:59.930727  INFO xorp_mld:28521 MLD6IGMP mld6igmp/mld6igmp_vif.cc:314 start ] Interface started: Vif[r1-eth1] pif_index: 345 vif_index: 1 addr: 2002::1 subnet: 2002::/64 broadcast: :: peer: :: addr: fe80::4c8a:5ff:fe5c:fb63 subnet: fe80::/64 broadcast: :: peer: :: Flags: MULTICAST BROADCAST UNDERLYING_VIF_UP MTU: 1500 UP IPv6 ENABLED
+[ 2014/06/13 15:30:59.931243  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:100 execute ] Executing module: rib (xorp_rib)
+[ 2014/06/13 15:30:59.931660 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://rib/common/0.1/get_status<
+[ 2014/06/13 15:30:59.931950  WARNING xorp_rtrmgr:28519 XrlFinderTarget obj/x86_64-unknown-linux-gnu/xrl/targets/finder_base.cc:482 handle_finder_0_2_resolve_xrl ] Handling method for finder/0.2/resolve_xrl failed: XrlCmdError 102 Command failed Target "rib" does not exist or is not enabled.
+[ 2014/06/13 15:30:59.932092  WARNING xorp_rtrmgr:28519 RTRMGR rtrmgr/task.cc:215 xrl_done ] Failed to receive reply, code: 201 Resolve failed  retries: 0  max_retries: 30
+[ 2014/06/13 15:30:59.932782  INFO xorp_fea:28520 FEA fea/data_plane/io/io_ip_socket.cc:878 findOrCreateInputSocket ] Successfully bound socket: 46 to interface: r1-eth1  input sockets size: 2
+[ 2014/06/13 15:30:59.932825  INFO xorp_fea:28520 FEA fea/data_plane/io/io_ip_socket.cc:636 join_multicast_group ] Joined IPv6 group: ff02::1 on interface r1-eth1 vif r1-eth1  socket: 46
+[ 2014/06/13 15:30:59.933011  INFO xorp_fea:28520 FEA fea/data_plane/io/io_ip_socket.cc:636 join_multicast_group ] Joined IPv6 group: ff02::2 on interface r1-eth1 vif r1-eth1  socket: 46
+[ 2014/06/13 15:30:59.933174  INFO xorp_fea:28520 FEA fea/data_plane/io/io_ip_socket.cc:636 join_multicast_group ] Joined IPv6 group: ff02::16 on interface r1-eth1 vif r1-eth1  socket: 46
+[ 2014/06/13 15:31:00.236778 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::c0a7:55ff:fe7a:dd0 to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:00.236855 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::c0a7:55ff:fe7a:dd0 to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:00.372726 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::b0ae:44ff:fe24:bba8 to ff02::2 on vif r1-eth0: too short data field (16 octets)
+[ 2014/06/13 15:31:00.372787 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::b0ae:44ff:fe24:bba8 to ff02::2 on vif r1-eth0: too short data field (16 octets)
+[ 2014/06/13 15:31:00.516714 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::4491:57ff:fe0b:1c84 to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:00.516781 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::4491:57ff:fe0b:1c84 to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:00.516849 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::1079:88ff:fea0:6674 to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:00.516885 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::1079:88ff:fea0:6674 to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:00.788691 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::8c4e:ddff:fe62:11a8 to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:00.788752 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::8c4e:ddff:fe62:11a8 to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:00.796681 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::84c8:8cff:fee6:9166 to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:00.796740 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::84c8:8cff:fee6:9166 to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:00.932281 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://rib/common/0.1/get_status<
+[ 2014/06/13 15:31:00.933112 TRACE xorp_rtrmgr RTRMGR ] Startup with XRL: >finder://rib/common/0.1/startup<
+[ 2014/06/13 15:31:00.933671 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://rib/common/0.1/get_status<
+[ 2014/06/13 15:31:00.933915  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:100 execute ] Executing module: pimsm6 (xorp_pimsm6)
+[ 2014/06/13 15:31:00.934317 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://PIMSM_6/common/0.1/get_status<
+[ 2014/06/13 15:31:00.934502  WARNING xorp_rtrmgr:28519 XrlFinderTarget obj/x86_64-unknown-linux-gnu/xrl/targets/finder_base.cc:482 handle_finder_0_2_resolve_xrl ] Handling method for finder/0.2/resolve_xrl failed: XrlCmdError 102 Command failed Target "PIMSM_6" does not exist or is not enabled.
+[ 2014/06/13 15:31:00.934635  WARNING xorp_rtrmgr:28519 RTRMGR rtrmgr/task.cc:215 xrl_done ] Failed to receive reply, code: 201 Resolve failed  retries: 0  max_retries: 30
+[ 2014/06/13 15:31:00.980682 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::bc9a:67ff:fe00:e7bd to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:00.980748 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::bc9a:67ff:fe00:e7bd to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:01.12618 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::90f5:eaff:fe64:ba4e to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:01.12676 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::90f5:eaff:fe64:ba4e to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:01.92645 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::7c2d:afff:feac:8784 to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:01.92702 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::7c2d:afff:feac:8784 to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:01.96208 INFO xorp_pimsm6 PIM ] Protocol enabled
+[ 2014/06/13 15:31:01.96321 INFO xorp_pimsm6 PIM ] CLI enabled
+[ 2014/06/13 15:31:01.96526 INFO xorp_pimsm6 PIM ] CLI started
+[ 2014/06/13 15:31:01.108633 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::48d5:30ff:fed8:a87b to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:01.108689 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::48d5:30ff:fed8:a87b to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:01.348683 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::48b5:9bff:fe83:12f to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:01.348745 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::48b5:9bff:fe83:12f to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:01.935294 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://PIMSM_6/common/0.1/get_status<
+[ 2014/06/13 15:31:01.936236 TRACE xorp_rtrmgr RTRMGR ] Startup with XRL: >finder://PIMSM_6/common/0.1/startup<
+[ 2014/06/13 15:31:01.936888 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://PIMSM_6/common/0.1/get_status<
+[ 2014/06/13 15:31:01.992959 INFO xorp_pimsm6 PIM ] Protocol started
+[ 2014/06/13 15:31:01.993345 INFO xorp_pimsm6 PIM ] Interface added: Vif[r1-eth0] pif_index: 334 vif_index: 0 addr: 2001::1 subnet: 2001::/64 broadcast: :: peer: :: addr: fe80::283d:bcff:fee4:3727 subnet: fe80::/64 broadcast: :: peer: :: Flags: MULTICAST BROADCAST UNDERLYING_VIF_UP MTU: 1500
+[ 2014/06/13 15:31:01.993516 INFO xorp_pimsm6 PIM ] Interface added: Vif[r1-eth1] pif_index: 345 vif_index: 1 addr: 2002::1 subnet: 2002::/64 broadcast: :: peer: :: addr: fe80::4c8a:5ff:fe5c:fb63 subnet: fe80::/64 broadcast: :: peer: :: Flags: MULTICAST BROADCAST UNDERLYING_VIF_UP MTU: 1500
+[ 2014/06/13 15:31:01.993668 INFO xorp_pimsm6 PIM ] Interface added: Vif[register_vif] pif_index: 0 vif_index: 2 addr: 2001::1 subnet: 2001::1/128 broadcast: :: peer: :: addr: fe80::283d:bcff:fee4:3727 subnet: fe80::283d:bcff:fee4:3727/128 broadcast: :: peer: :: Flags: PIM_REGISTER UNDERLYING_VIF_UP MTU: 1500
+[ 2014/06/13 15:31:02.938185 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://PIMSM_6/common/0.1/get_status<
+[ 2014/06/13 15:31:02.938511 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(pimsm6.targetname)/pim/0.1/enable_vif?vif_name:txt=$(vif.@)&enable:bool=`~$(@)`
+[ 2014/06/13 15:31:02.938621 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://PIMSM_6/pim/0.1/enable_vif?vif_name:txt=r1-eth0&enable:bool=true<
+[ 2014/06/13 15:31:02.939161 INFO xorp_pimsm6 PIM ] Interface enabled: Vif[r1-eth0] pif_index: 334 vif_index: 0 addr: 2001::1 subnet: 2001::/64 broadcast: :: peer: :: addr: fe80::283d:bcff:fee4:3727 subnet: fe80::/64 broadcast: :: peer: :: Flags: MULTICAST BROADCAST UNDERLYING_VIF_UP MTU: 1500 DOWN IPv6 ENABLED
+[ 2014/06/13 15:31:02.939309 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(pimsm6.targetname)/pim/0.1/set_vif_dr_priority?vif_name:txt=$(vif.@)&dr_priority:u32=$(@)
+[ 2014/06/13 15:31:02.939405 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://PIMSM_6/pim/0.1/set_vif_dr_priority?vif_name:txt=r1-eth0&dr_priority:u32=1<
+[ 2014/06/13 15:31:02.939970 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(pimsm6.targetname)/pim/0.1/set_vif_hello_period?vif_name:txt=$(vif.@)&hello_period:u32=$(@)
+[ 2014/06/13 15:31:02.940077 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://PIMSM_6/pim/0.1/set_vif_hello_period?vif_name:txt=r1-eth0&hello_period:u32=30<
+[ 2014/06/13 15:31:02.940657 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(pimsm6.targetname)/pim/0.1/set_vif_hello_triggered_delay?vif_name:txt=$(vif.@)&hello_triggered_delay:u32=$(@)
+[ 2014/06/13 15:31:02.940765 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://PIMSM_6/pim/0.1/set_vif_hello_triggered_delay?vif_name:txt=r1-eth0&hello_triggered_delay:u32=5<
+[ 2014/06/13 15:31:02.941296 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(pimsm6.targetname)/pim/0.1/start_vif?vif_name:txt=$(vif.@)
+[ 2014/06/13 15:31:02.941390 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://PIMSM_6/pim/0.1/start_vif?vif_name:txt=r1-eth0<
+[ 2014/06/13 15:31:02.942021 INFO xorp_pimsm6 PIM ] Interface started: Vif[r1-eth0] pif_index: 334 vif_index: 0 addr: 2001::1 subnet: 2001::/64 broadcast: :: peer: :: addr: fe80::283d:bcff:fee4:3727 subnet: fe80::/64 broadcast: :: peer: :: Flags: MULTICAST BROADCAST UNDERLYING_VIF_UP MTU: 1500 UP IPv6 ENABLED
+[ 2014/06/13 15:31:02.942170 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(pimsm6.targetname)/pim/0.1/enable_vif?vif_name:txt=$(vif.@)&enable:bool=`~$(@)`
+[ 2014/06/13 15:31:02.942267 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://PIMSM_6/pim/0.1/enable_vif?vif_name:txt=r1-eth1&enable:bool=true<
+[ 2014/06/13 15:31:02.942432 INFO xorp_pimsm6 PIM ] Interface enabled: Vif[r1-eth1] pif_index: 345 vif_index: 1 addr: 2002::1 subnet: 2002::/64 broadcast: :: peer: :: addr: fe80::4c8a:5ff:fe5c:fb63 subnet: fe80::/64 broadcast: :: peer: :: Flags: MULTICAST BROADCAST UNDERLYING_VIF_UP MTU: 1500 DOWN IPv6 ENABLED
+[ 2014/06/13 15:31:02.942532 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(pimsm6.targetname)/pim/0.1/set_vif_dr_priority?vif_name:txt=$(vif.@)&dr_priority:u32=$(@)
+[ 2014/06/13 15:31:02.942612 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://PIMSM_6/pim/0.1/set_vif_dr_priority?vif_name:txt=r1-eth1&dr_priority:u32=1<
+[ 2014/06/13 15:31:02.942937 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(pimsm6.targetname)/pim/0.1/set_vif_hello_period?vif_name:txt=$(vif.@)&hello_period:u32=$(@)
+[ 2014/06/13 15:31:02.943041 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://PIMSM_6/pim/0.1/set_vif_hello_period?vif_name:txt=r1-eth1&hello_period:u32=30<
+[ 2014/06/13 15:31:02.942951  WARNING xorp_fea:28520 FEA fea/data_plane/io/io_ip_socket.cc:310 IoIpSocket ] Registering with iftree: pushed-config
+[ 2014/06/13 15:31:02.943407 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(pimsm6.targetname)/pim/0.1/set_vif_hello_triggered_delay?vif_name:txt=$(vif.@)&hello_triggered_delay:u32=$(@)
+[ 2014/06/13 15:31:02.943493 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://PIMSM_6/pim/0.1/set_vif_hello_triggered_delay?vif_name:txt=r1-eth1&hello_triggered_delay:u32=5<
+[ 2014/06/13 15:31:02.943743 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(pimsm6.targetname)/pim/0.1/start_vif?vif_name:txt=$(vif.@)
+[ 2014/06/13 15:31:02.943811 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://PIMSM_6/pim/0.1/start_vif?vif_name:txt=r1-eth1<
+[ 2014/06/13 15:31:02.944004 INFO xorp_pimsm6 PIM ] Interface started: Vif[r1-eth1] pif_index: 345 vif_index: 1 addr: 2002::1 subnet: 2002::/64 broadcast: :: peer: :: addr: fe80::4c8a:5ff:fe5c:fb63 subnet: fe80::/64 broadcast: :: peer: :: Flags: MULTICAST BROADCAST UNDERLYING_VIF_UP MTU: 1500 UP IPv6 ENABLED
+[ 2014/06/13 15:31:02.944402 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(pimsm6.targetname)/pim/0.1/enable_vif?vif_name:txt=$(vif.@)&enable:bool=`~$(@)`
+[ 2014/06/13 15:31:02.944510 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://PIMSM_6/pim/0.1/enable_vif?vif_name:txt=register_vif&enable:bool=true<
+[ 2014/06/13 15:31:02.944730 INFO xorp_pimsm6 PIM ] Interface enabled: Vif[register_vif] pif_index: 0 vif_index: 2 addr: 2001::1 subnet: 2001::1/128 broadcast: :: peer: :: addr: fe80::283d:bcff:fee4:3727 subnet: fe80::283d:bcff:fee4:3727/128 broadcast: :: peer: :: Flags: PIM_REGISTER UNDERLYING_VIF_UP MTU: 1500 DOWN IPv6 ENABLED
+[ 2014/06/13 15:31:02.944929 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(pimsm6.targetname)/pim/0.1/set_vif_dr_priority?vif_name:txt=$(vif.@)&dr_priority:u32=$(@)
+[ 2014/06/13 15:31:02.945022 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://PIMSM_6/pim/0.1/set_vif_dr_priority?vif_name:txt=register_vif&dr_priority:u32=1<
+[ 2014/06/13 15:31:02.945421 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(pimsm6.targetname)/pim/0.1/set_vif_hello_period?vif_name:txt=$(vif.@)&hello_period:u32=$(@)
+[ 2014/06/13 15:31:02.945528 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://PIMSM_6/pim/0.1/set_vif_hello_period?vif_name:txt=register_vif&hello_period:u32=30<
+[ 2014/06/13 15:31:02.945453  INFO xorp_fea:28520 FEA fea/data_plane/io/io_ip_socket.cc:878 findOrCreateInputSocket ] Successfully bound socket: 56 to interface: r1-eth0  input sockets size: 1
+[ 2014/06/13 15:31:02.945495  INFO xorp_fea:28520 FEA fea/data_plane/io/io_ip_socket.cc:636 join_multicast_group ] Joined IPv6 group: ff02::d on interface r1-eth0 vif r1-eth0  socket: 56
+[ 2014/06/13 15:31:02.945623 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(pimsm6.targetname)/pim/0.1/set_vif_hello_triggered_delay?vif_name:txt=$(vif.@)&hello_triggered_delay:u32=$(@)
+[ 2014/06/13 15:31:02.945708 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://PIMSM_6/pim/0.1/set_vif_hello_triggered_delay?vif_name:txt=register_vif&hello_triggered_delay:u32=5<
+[ 2014/06/13 15:31:02.945868 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(pimsm6.targetname)/pim/0.1/start_vif?vif_name:txt=$(vif.@)
+[ 2014/06/13 15:31:02.945961 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://PIMSM_6/pim/0.1/start_vif?vif_name:txt=register_vif<
+[ 2014/06/13 15:31:02.946072  INFO xorp_fea:28520 FEA fea/data_plane/io/io_ip_socket.cc:878 findOrCreateInputSocket ] Successfully bound socket: 57 to interface: r1-eth1  input sockets size: 2
+[ 2014/06/13 15:31:02.946114  INFO xorp_fea:28520 FEA fea/data_plane/io/io_ip_socket.cc:636 join_multicast_group ] Joined IPv6 group: ff02::d on interface r1-eth1 vif r1-eth1  socket: 57
+[ 2014/06/13 15:31:02.946150 INFO xorp_pimsm6 PIM ] Interface started: Vif[register_vif] pif_index: 0 vif_index: 2 addr: 2001::1 subnet: 2001::1/128 broadcast: :: peer: :: addr: fe80::283d:bcff:fee4:3727 subnet: fe80::283d:bcff:fee4:3727/128 broadcast: :: peer: :: Flags: PIM_REGISTER UNDERLYING_VIF_UP MTU: 1500 UP IPv6 ENABLED
+[ 2014/06/13 15:31:02.946239 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(pimsm6.targetname)/pim/0.1/add_config_static_rp6?group_prefix:ipv6net=$(group-prefix.@)&rp_addr:ipv6=$(rp.@)&rp_priority:u32=$(@.rp-priority)&hash_mask_len:u32=$(@.hash-mask-len)
+[ 2014/06/13 15:31:02.946421 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://PIMSM_6/pim/0.1/add_config_static_rp6?group_prefix:ipv6net=ff00::/8&rp_addr:ipv6=2002::1&rp_priority:u32=192&hash_mask_len:u32=126<
+[ 2014/06/13 15:31:02.946942 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(pimsm6.targetname)/pim/0.1/config_static_rp_done
+[ 2014/06/13 15:31:02.947010 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://PIMSM_6/pim/0.1/config_static_rp_done<
+[ 2014/06/13 15:31:02.947572 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(pimsm6.targetname)/pim/0.1/set_switch_to_spt_threshold?is_enabled:bool=`~$(@.disable)`&interval_sec:u32=$(@.interval)&bytes:u32=$(@.bytes)
+[ 2014/06/13 15:31:02.947712 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://PIMSM_6/pim/0.1/set_switch_to_spt_threshold?is_enabled:bool=true&interval_sec:u32=100&bytes:u32=102400<
+[ 2014/06/13 15:31:02.948256 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://PIMSM_6/common/0.1/get_status<
+[ 2014/06/13 15:31:02.948462  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:100 execute ] Executing module: policy (xorp_policy)
+[ 2014/06/13 15:31:02.948853 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://policy/common/0.1/get_status<
+[ 2014/06/13 15:31:02.949029  WARNING xorp_rtrmgr:28519 XrlFinderTarget obj/x86_64-unknown-linux-gnu/xrl/targets/finder_base.cc:482 handle_finder_0_2_resolve_xrl ] Handling method for finder/0.2/resolve_xrl failed: XrlCmdError 102 Command failed Target "policy" does not exist or is not enabled.
+[ 2014/06/13 15:31:02.949161  WARNING xorp_rtrmgr:28519 RTRMGR rtrmgr/task.cc:215 xrl_done ] Failed to receive reply, code: 201 Resolve failed  retries: 0  max_retries: 30
+[ 2014/06/13 15:31:03.950083 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://policy/common/0.1/get_status<
+[ 2014/06/13 15:31:03.951031 TRACE xorp_rtrmgr RTRMGR ] Startup with XRL: >finder://policy/common/0.1/startup<
+[ 2014/06/13 15:31:03.951616 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://policy/common/0.1/get_status<
+[ 2014/06/13 15:31:03.951867  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:100 execute ] Executing module: fib2mrib (xorp_fib2mrib)
+[ 2014/06/13 15:31:03.952302 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://fib2mrib/common/0.1/get_status<
+[ 2014/06/13 15:31:03.952519  WARNING xorp_rtrmgr:28519 XrlFinderTarget obj/x86_64-unknown-linux-gnu/xrl/targets/finder_base.cc:482 handle_finder_0_2_resolve_xrl ] Handling method for finder/0.2/resolve_xrl failed: XrlCmdError 102 Command failed Target "fib2mrib" does not exist or is not enabled.
+[ 2014/06/13 15:31:03.952672  WARNING xorp_rtrmgr:28519 RTRMGR rtrmgr/task.cc:215 xrl_done ] Failed to receive reply, code: 201 Resolve failed  retries: 0  max_retries: 30
+[ 2014/06/13 15:31:04.244785 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::c0a7:55ff:fe7a:dd0 to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:04.244859 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::c0a7:55ff:fe7a:dd0 to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:04.380679 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::b0ae:44ff:fe24:bba8 to ff02::2 on vif r1-eth0: too short data field (16 octets)
+[ 2014/06/13 15:31:04.380740 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::b0ae:44ff:fe24:bba8 to ff02::2 on vif r1-eth0: too short data field (16 octets)
+[ 2014/06/13 15:31:04.524757 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::4491:57ff:fe0b:1c84 to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:04.524834 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::4491:57ff:fe0b:1c84 to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:04.524908 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::1079:88ff:fea0:6674 to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:04.524945 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::1079:88ff:fea0:6674 to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:04.796833 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::8c4e:ddff:fe62:11a8 to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:04.796901 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::8c4e:ddff:fe62:11a8 to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:04.804696 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::84c8:8cff:fee6:9166 to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:04.804756 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::84c8:8cff:fee6:9166 to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:04.952878 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://fib2mrib/common/0.1/get_status<
+[ 2014/06/13 15:31:04.953759 TRACE xorp_rtrmgr RTRMGR ] Startup with XRL: >finder://fib2mrib/common/0.1/startup<
+[ 2014/06/13 15:31:04.954344 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://fib2mrib/common/0.1/get_status<
+[ 2014/06/13 15:31:04.954605 TRACE xorp_rtrmgr RTRMGR ] Expanding xrl $(fib2mrib.targetname)/fib2mrib/0.1/start_fib2mrib
+[ 2014/06/13 15:31:04.954670 TRACE xorp_rtrmgr RTRMGR ] Executing XRL: >finder://fib2mrib/fib2mrib/0.1/start_fib2mrib<
+[ 2014/06/13 15:31:04.955225 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://fib2mrib/common/0.1/get_status<
+[ 2014/06/13 15:31:04.955479  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/task.cc:2242 run_task ] No more tasks to run
+[ 2014/06/13 15:31:04.988781 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::bc9a:67ff:fe00:e7bd to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:04.988850 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::bc9a:67ff:
+fe00:e7bd to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:05.20719 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::90f5:eaff:fe64:ba4e to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:05.20780 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::90f5:eaff:fe64:ba4e to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:05.100762 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::7c2d:afff:feac:8784 to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:05.100837 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::7c2d:afff:feac:8784 to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:05.116707 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::48d5:30ff:fed8:a87b to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:05.116770 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::48d5:30ff:fed8:a87b to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:05.356769 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::48b5:9bff:fe83:12f to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:31:05.356843 WARNING xorp_mld MLD6IGMP ] RX packet from fe80::48b5:9bff:fe83:12f to ff02::2 on vif r1-eth1: too short data field (16 octets)
+[ 2014/06/13 15:37:27.932999  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/task.cc:1033 shutdown ] Shutting down module: fib2mrib
+[ 2014/06/13 15:37:27.933070  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/task.cc:1073 shutdown ] Shutdown with XRL: >finder://fib2mrib/common/0.1/shutdown<
+[ 2014/06/13 15:37:27.933554 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://fib2mrib/common/0.1/get_status<
+[ 2014/06/13 15:37:28.934778 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://fib2mrib/common/0.1/get_status<
+[ 2014/06/13 15:37:28.934993  WARNING xorp_rtrmgr:28519 XrlFinderTarget obj/x86_64-unknown-linux-gnu/xrl/targets/finder_base.cc:482 handle_finder_0_2_resolve_xrl ] Handling method for finder/0.2/resolve_xrl failed: XrlCmdError 102 Command failed Target "fib2mrib" does not exist or is not enabled.
+[ 2014/06/13 15:37:29.936118  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:179 terminate ] Terminating module: fib2mrib
+[ 2014/06/13 15:37:29.936191  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:202 terminate ] Killing module: fib2mrib
+[ 2014/06/13 15:37:31.937084  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:241 terminate_with_prejudice ] Killing module with prejudice: fib2mrib
+[ 2014/06/13 15:37:33.938057  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/task.cc:1033 shutdown ] Shutting down module: policy
+[ 2014/06/13 15:37:33.938175  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/task.cc:1073 shutdown ] Shutdown with XRL: >finder://policy/common/0.1/shutdown<
+[ 2014/06/13 15:37:33.938961 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://policy/common/0.1/get_status<
+[ 2014/06/13 15:37:33.939009  INFO xorp_rtrmgr:28519 XRL libxipc/xrl_router.cc:459 lookup_sender ] Sender died (protocol = "unix", address = ":var:tmp:xrl.fneF3M")
+[ 2014/06/13 15:37:33.939104  ERROR xorp_rtrmgr:28519 LIBCOMM libcomm/comm_user.c:886 comm_connect_unix ] Error connecting to unix socket.  Path: /var/tmp/xrl.fneF3M.  Error: No such file or directory
+[ 2014/06/13 15:37:33.939186  ERROR xorp_rtrmgr:28519 XRL libxipc/xrl_pf_factory.cc:61 create_sender ] XrlPFSenderFactory::create failed: XrlPFConstructorError from line 153 of libxipc/xrl_pf_unix.cc: Could not connect to /var/tmp/xrl.fneF3M
+
+[ 2014/06/13 15:37:33.939207  ERROR xorp_rtrmgr:28519 XRL libxipc/xrl_router.cc:478 lookup_sender ] Could not create XrlPFSender for protocol = "unix" address = ":var:tmp:xrl.fneF3M" 
+[ 2014/06/13 15:37:33.939243  ERROR xorp_rtrmgr:28519 LIBCOMM libcomm/comm_user.c:886 comm_connect_unix ] Error connecting to unix socket.  Path: /var/tmp/xrl.qghBei.  Error: No such file or directory
+[ 2014/06/13 15:37:33.939283  ERROR xorp_rtrmgr:28519 XRL libxipc/xrl_pf_factory.cc:61 create_sender ] XrlPFSenderFactory::create failed: XrlPFConstructorError from line 153 of libxipc/xrl_pf_unix.cc: Could not connect to /var/tmp/xrl.qghBei
+
+[ 2014/06/13 15:37:33.939300  ERROR xorp_rtrmgr:28519 XRL libxipc/xrl_router.cc:478 lookup_sender ] Could not create XrlPFSender for protocol = "unix" address = ":var:tmp:xrl.qghBei" 
+[ 2014/06/13 15:37:33.939712  WARNING xorp_rtrmgr:28519 XrlFinderTarget obj/x86_64-unknown-linux-gnu/xrl/targets/finder_base.cc:482 handle_finder_0_2_resolve_xrl ] Handling method for finder/0.2/resolve_xrl failed: XrlCmdError 102 Command failed Target "policy" does not exist or is not enabled.
+[ 2014/06/13 15:37:34.941317  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:179 terminate ] Terminating module: policy
+[ 2014/06/13 15:37:34.941376  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:202 terminate ] Killing module: policy
+[ 2014/06/13 15:37:36.941405  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:241 terminate_with_prejudice ] Killing module with prejudice: policy
+[ 2014/06/13 15:37:38.942396  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/task.cc:1033 shutdown ] Shutting down module: pimsm6
+[ 2014/06/13 15:37:38.942510  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/task.cc:1073 shutdown ] Shutdown with XRL: >finder://PIMSM_6/common/0.1/shutdown<
+[ 2014/06/13 15:37:38.943140 INFO xorp_pimsm6 PIM ] CLI stopped
+[ 2014/06/13 15:37:38.943522 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://PIMSM_6/common/0.1/get_status<
+[ 2014/06/13 15:37:38.943604 INFO xorp_pimsm6 PIM ] Interface stopped: Vif[r1-eth0] pif_index: 334 vif_index: 0 addr: 2001::1 subnet: 2001::/64 broadcast: :: peer: :: addr: fe80::283d:bcff:fee4:3727 subnet: fe80::/64 broadcast: :: peer: :: Flags: MULTICAST BROADCAST UNDERLYING_VIF_UP MTU: 1500 DOWN IPv6 ENABLED
+[ 2014/06/13 15:37:38.943786 INFO xorp_pimsm6 PIM ] Interface stopped: Vif[r1-eth1] pif_index: 345 vif_index: 1 addr: 2002::1 subnet: 2002::/64 broadcast: :: peer: :: addr: fe80::4c8a:5ff:fe5c:fb63 subnet: fe80::/64 broadcast: :: peer: :: Flags: MULTICAST BROADCAST UNDERLYING_VIF_UP MTU: 1500 DOWN IPv6 ENABLED
+[ 2014/06/13 15:37:38.944180 INFO xorp_pimsm6 PIM ] Interface stopped: Vif[register_vif] pif_index: 0 vif_index: 2 addr: 2001::1 subnet: 2001::1/128 broadcast: :: peer: :: addr: fe80::283d:bcff:fee4:3727 subnet: fe80::283d:bcff:fee4:3727/128 broadcast: :: peer: :: Flags: PIM_REGISTER UNDERLYING_VIF_UP MTU: 1500 DOWN IPv6 ENABLED
+[ 2014/06/13 15:37:38.946128  WARNING xorp_fea:28520 MFEA fea/mfea_node.cc:1536 unregister_protocol ] unregister_protocol: module: PIMSM_6  iface: r1-eth0/r1-eth0
+[ 2014/06/13 15:37:38.947077  WARNING xorp_fea:28520 MFEA fea/mfea_node.cc:1536 unregister_protocol ] unregister_protocol: module: PIMSM_6  iface: r1-eth1/r1-eth1
+[ 2014/06/13 15:37:38.947268  WARNING xorp_fea:28520 MFEA fea/mfea_node.cc:1536 unregister_protocol ] unregister_protocol: module: PIMSM_6  iface: register_vif/register_vif
+[ 2014/06/13 15:37:38.948289 INFO xorp_pimsm6 PIM ] Interface deleted: r1-eth0
+[ 2014/06/13 15:37:38.948327 INFO xorp_pimsm6 PIM ] Interface deleted: r1-eth1
+[ 2014/06/13 15:37:38.948345 INFO xorp_pimsm6 PIM ] Interface deleted: register_vif
+[ 2014/06/13 15:37:39.944833 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://PIMSM_6/common/0.1/get_status<
+[ 2014/06/13 15:37:39.945056  WARNING xorp_rtrmgr:28519 XrlFinderTarget obj/x86_64-unknown-linux-gnu/xrl/targets/finder_base.cc:482 handle_finder_0_2_resolve_xrl ] Handling method for finder/0.2/resolve_xrl failed: XrlCmdError 102 Command failed Target "PIMSM_6" does not exist or is not enabled.
+[ 2014/06/13 15:37:40.946143  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:179 terminate ] Terminating module: pimsm6
+[ 2014/06/13 15:37:40.946206  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:202 terminate ] Killing module: pimsm6
+[ 2014/06/13 15:37:42.947152  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:241 terminate_with_prejudice ] Killing module with prejudice: pimsm6
+[ 2014/06/13 15:37:44.948210  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/task.cc:1033 shutdown ] Shutting down module: rib
+[ 2014/06/13 15:37:44.948313  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/task.cc:1073 shutdown ] Shutdown with XRL: >finder://rib/common/0.1/shutdown<
+[ 2014/06/13 15:37:44.949041 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://rib/common/0.1/get_status<
+[ 2014/06/13 15:37:45.949392 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://rib/common/0.1/get_status<
+[ 2014/06/13 15:37:45.949583  WARNING xorp_rtrmgr:28519 XrlFinderTarget obj/x86_64-unknown-linux-gnu/xrl/targets/finder_base.cc:482 handle_finder_0_2_resolve_xrl ] Handling method for finder/0.2/resolve_xrl failed: XrlCmdError 102 Command failed Target "rib" does not exist or is not enabled.
+[ 2014/06/13 15:37:46.950723  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:179 terminate ] Terminating module: rib
+[ 2014/06/13 15:37:46.950789  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:202 terminate ] Killing module: rib
+[ 2014/06/13 15:37:47.971065  ERROR xorp_fea:28520 MFEA fea/mfea_mrouter.cc:1499 delete_multicast_vif ] setsockopt(MRT6_DEL_MIF, vif r1-eth1) failed: Cannot assign requested address
+[ 2014/06/13 15:37:47.971101  ERROR xorp_fea:28520 MFEA fea/mfea_vif.cc:193 stop ] Cannot delete multicast vif r1-eth1 with the kernel
+[ 2014/06/13 15:37:47.971138  INFO xorp_fea:28520 MFEA fea/mfea_vif.cc:198 stop ] Interface stopped Vif[r1-eth1] pif_index: 345 vif_index: 1 addr: 2002::1 subnet: 2002::/64 broadcast: :: peer: :: addr: fe80::4c8a:5ff:fe5c:fb63 subnet: fe80::/64 broadcast: :: peer: :: Flags: MULTICAST BROADCAST MTU: 1500 DOWN IPv6 ENABLED
+[ 2014/06/13 15:37:47.971147  WARNING xorp_fea:28520 MFEA fea/mfea_vif.cc:111 start ] WARNING:  Delaying start of mfea-vif: r1-eth1 because underlying vif is not up.
+[ 2014/06/13 15:37:47.971284  WA
+RNING xorp_fea:28520 FEA fea/data_plane/ifconfig/ifconfig_parse_netlink_socket.cc:629 nlm_dellink_to_fea_cfg ] dellink, interface: r1-eth1  tree: system-config
+[ 2014/06/13 15:37:47.971301  INFO xorp_fea:28520 FEA fea/data_plane/io/io_ip_socket.cc:1420 notifyDeletingVif ] IoIpSocket::notifyDeletingVif: r1-eth1:r1-eth1
+[ 2014/06/13 15:37:47.971328  INFO xorp_fea:28520 FEA fea/data_plane/io/io_ip_socket.cc:1435 notifyDeletingVif ] Closed socket: 46 on interface: r1-eth1:r1-eth1 because it is being deleted, input sockets count: 1
+[ 2014/06/13 15:37:47.971349  ERROR xorp_fea:28520 MFEA fea/mfea_node.cc:500 vif_update ] vif_updated:  Delete: r1-eth1/r1-eth1
+[ 2014/06/13 15:37:47.971357  ERROR xorp_fea:28520 MFEA fea/mfea_mrouter.cc:1499 delete_multicast_vif ] setsockopt(MRT6_DEL_MIF, vif r1-eth1) failed: Cannot assign requested address
+[ 2014/06/13 15:37:47.971362  WARNING xorp_fea:28520 MFEA fea/mfea_node.cc:1536 unregister_protocol ] unregister_protocol: module:   iface: r1-eth1/r1-eth1
+[ 2014/06/13 15:37:47.971379  INFO xorp_fea:28520 MFEA fea/mfea_node.cc:1135 delete_vif ] Interface deleted: r1-eth1
+[ 2014/06/13 15:37:47.971386  INFO xorp_fea:28520 FEA fea/data_plane/io/io_ip_socket.cc:1420 notifyDeletingVif ] IoIpSocket::notifyDeletingVif: r1-eth1:r1-eth1
+[ 2014/06/13 15:37:47.975232  INFO xorp_mld:28521 MLD6IGMP mld6igmp/mld6igmp_node.cc:824 set_vif_flags ] Interface flags changed: Vif[r1-eth1] pif_index: 345 vif_index: 1 addr: 2002::1 subnet: 2002::/64 broadcast: :: peer: :: addr: fe80::4c8a:5ff:fe5c:fb63 subnet: fe80::/64 broadcast: :: peer: :: Flags: MULTICAST BROADCAST MTU: 1500
+[ 2014/06/13 15:37:47.976015  INFO xorp_mld:28521 MLD6IGMP mld6igmp/mld6igmp_node.cc:966 delete_vif_addr ] Deleted address on interface r1-eth1: addr: 2002::1 subnet: 2002::/64 broadcast: :: peer: ::
+[ 2014/06/13 15:37:47.976218  INFO xorp_mld:28521 MLD6IGMP mld6igmp/mld6igmp_vif.cc:408 stop ] Interface stopped: Vif[r1-eth1] pif_index: 345 vif_index: 1 addr: fe80::4c8a:5ff:fe5c:fb63 subnet: fe80::/64 broadcast: :: peer: :: Flags: MULTICAST BROADCAST MTU: 1500 DOWN IPv6 ENABLED
+[ 2014/06/13 15:37:47.976238  INFO xorp_mld:28521 MLD6IGMP mld6igmp/mld6igmp_node.cc:966 delete_vif_addr ] Deleted address on interface r1-eth1: addr: fe80::4c8a:5ff:fe5c:fb63 subnet: fe80::/64 broadcast: :: peer: ::
+[ 2014/06/13 15:37:47.976248  ERROR xorp_mld:28521 MLD6IGMP mld6igmp/mld6igmp_node.cc:978 delete_vif_addr ] Error updating primary address for vif r1-eth1: invalid primary address: ::  primary_a: ::
+[ 2014/06/13 15:37:47.976988  INFO xorp_mld:28521 MLD6IGMP mld6igmp/mld6igmp_node.cc:772 delete_vif ] Interface deleted: r1-eth1
+[ 2014/06/13 15:37:48.118463  WARNING xorp_fea:28520 FEA fea/iftree.cc:682 finalize_state ] Deleting interface: r1-eth1 from tree: system-config
+[ 2014/06/13 15:37:48.135003  ERROR xorp_fea:28520 MFEA fea/mfea_mrouter.cc:1499 delete_multicast_vif ] setsockopt(MRT6_DEL_MIF, vif r1-eth0) failed: Cannot assign requested address
+[ 2014/06/13 15:37:48.135039  ERROR xorp_fea:28520 MFEA fea/mfea_vif.cc:193 stop ] Cannot delete multicast vif r1-eth0 with the kernel
+[ 2014/06/13 15:37:48.135088  INFO xorp_fea:28520 MFEA fea/mfea_vif.cc:198 stop ] Interface stopped Vif[r1-eth0] pif_index: 334 vif_index: 0 addr: 2001::1 subnet: 2001::/64 broadcast: :: peer: :: addr: fe80::283d:bcff:fee4:3727 subnet: fe80::/64 broadcast: :: peer: :: Flags: MULTICAST BROADCAST MTU: 1500 DOWN IPv6 ENABLED
+[ 2014/06/13 15:37:48.135104  WARNING xorp_fea:28520 MFEA fea/mfea_vif.cc:111 start ] WARNING:  Delaying start of mfea-vif: r1-eth0 because underlying vif is not up.
+[ 2014/06/13 15:37:48.135333  WARNING xorp_fea:28520 FEA fea/data_plane/ifconfig/ifconfig_parse_netlink_socket.cc:629 nlm_dellink_to_fea_cfg ] dellink, interface: r1-eth0  tree: system-config
+[ 2014/06/13 15:37:48.135360  INFO xorp_fea:28520 FEA fea/data_plane/io/io_ip_socket.cc:1420 notifyDeletingVif ] IoIpSocket::notifyDeletingVif: r1-eth0:r1-eth0
+[ 2014/06/13 15:37:48.135390  INFO xorp_fea:28520 FEA fea/data_plane/io/io_ip_socket.cc:1435 notifyDeletingVif ] Closed socket: 44 on interface: r1-eth0:r1-eth0 because it is being deleted, input sockets count: 0
+[ 2014/06/13 15:37:48.135410  ERROR xorp_fea:28520 MFEA fea/mfea_node.cc:500 vif_update ] vif_updated:  Delete: r1-eth0/r1-eth0
+[ 2014/06/13 15:37:48.135425  ERROR xorp_fea:28520 MFEA fea/mfea_mrouter.cc:1499 delete_multicast_vif ] setsockopt(MRT6_DEL_MIF, vif r1-eth0) failed: Cannot assign requested address
+[ 2014/06/13 15:37:48.135435  WARNING xorp_fea:28520 MFEA fea/mfea_node.cc:1536 unregister_protocol ] unregister_protocol: module:   iface: r1-eth0/r1-eth0
+[ 2014/06/13 15:37:48.135460  INFO xorp_fea:28520 MFEA fea/mfea_node.cc:1135 delete_vif ] Interface deleted: r1-eth0
+[ 2014/06/13 15:37:48.135475  INFO xorp_fea:28520 FEA fea/data_plane/io/io_ip_socket.cc:1420 notifyDeletingVif ] IoIpSocket::notifyDeletingVif: r1-eth0:r1-eth0
+[ 2014/06/13 15:37:48.138481  INFO xorp_mld:28521 MLD6IGMP mld6igmp/mld6igmp_node.cc:824 set_vif_flags ] Interface flags changed: Vif[r1-eth0] pif_index: 334 vif_index: 0 addr: 2001::1 subnet: 2001::/64 broadcast: :: peer: :: addr: fe80::283d:bcff:fee4:3727 subnet: fe80::/64 broadcast: :: peer: :: Flags: MULTICAST BROADCAST MTU: 1500
+[ 2014/06/13 15:37:48.138727  INFO xorp_mld:28521 MLD6IGMP mld6igmp/mld6igmp_node.cc:966 delete_vif_addr ] Deleted address on interface r1-eth0: addr: 2001::1 subnet: 2001::/64 broadcast: :: peer: ::
+[ 2014/06/13 15:37:48.138960  INFO xorp_mld:28521 MLD6IGMP mld6igmp/mld6igmp_vif.cc:408 stop ] Interface stopped: Vif[r1-eth0] pif_index: 334 vif_index: 0 addr: fe80::283d:bcff:fee4:3727 subnet: fe80::/64 broadcast: :: peer: :: Flags: MULTICAST BROADCAST MTU: 1500 DOWN IPv6 ENABLED
+[ 2014/06/13 15:37:48.138992  INFO xorp_mld:28521 MLD6IGMP mld6igmp/mld6igmp_node.cc:966 delete_vif_addr ] Deleted address on interface r1-eth0: addr: fe80::283d:bcff:fee4:3727 subnet: fe80::/64 broadcast: :: peer: ::
+[ 2014/06/13 15:37:48.139008  ERROR xorp_mld:28521 MLD6IGMP mld6igmp/mld6igmp_node.cc:978 delete_vif_addr ] Error updating primary address for vif r1-eth0: invalid primary address: ::  primary_a: ::
+[ 2014/06/13 15:37:48.139392  INFO xorp_mld:28521 MLD6IGMP mld6igmp/mld6igmp_node.cc:772 delete_vif ] Interface deleted: r1-eth0
+[ 2014/06/13 15:37:48.951577  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:241 terminate_with_prejudice ] Killing module with prejudice: rib
+[ 2014/06/13 15:37:50.952586  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/task.cc:1033 shutdown ] Shutting down module: mld
+[ 2014/06/13 15:37:50.952711  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/task.cc:1073 shutdown ] Shutdown with XRL: >finder://MLD/common/0.1/shutdown<
+[ 2014/06/13 15:37:50.953313  INFO xorp_mld:28521 MLD6IGMP mld6igmp/mld6igmp_node_cli.cc:111 stop ] CLI stopped
+[ 2014/06/13 15:37:50.953483 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://MLD/common/0.1/get_status<
+[ 2014/06/13 15:37:50.953911  INFO xorp_mld:28521 MLD6IGMP mld6igmp/mld6igmp_node_cli.cc:111 stop ] CLI stopped
+[ 2014/06/13 15:37:50.954299  INFO xorp_mld:28521 MLD6IGMP mld6igmp/mld6igmp_node_cli.cc:111 stop ] CLI stopped
+[ 2014/06/13 15:37:50.954656  WARNING xorp_rtrmgr:28519 LIBXORP libxorp/asyncio.cc:229 read ] read error: _fd: 18  offset: 0  total-len: 4 error: Connection reset by peer
+[ 2014/06/13 15:37:50.954592  ERROR xorp_fea:28520 LIBXORP libxorp/buffered_asyncio.cc:226 io_event ] read error 104
+[ 2014/06/13 15:37:50.954615  ERROR xorp_fea:28520 XRL libxipc/xrl_pf_stcp.cc:197 read_event ] Read failed (error = 104)
+[ 2014/06/13 15:37:50.954621  ERROR xorp_fea:28520 XRL libxipc/xrl_pf_stcp.cc:407 die ] STCPRequestHandler died: read error
+[ 2014/06/13 15:37:51.954724  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:179 terminate ] Terminating module: mld
+[ 2014/06/13 15:37:51.954778  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:202 terminate ] Killing module: mld
+[ 2014/06/13 15:37:53.955765  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:241 terminate_with_prejudice ] Killing module with prejudice: mld
+[ 2014/06/13 15:37:55.956425  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/task.cc:1033 shutdown ] Shutting down module: mfea6
+[ 2014/06/13 15:37:55.956533  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/task.cc:1073 shutdown ] Shutdown with XRL: >finder://MFEA_6/common/0.1/shutdown<
+[ 2014/06/13 15:37:55.957617  INFO xorp_fea:28520 MFEA fea/mfea_node_cli.cc:111 stop ] CLI stopped
+[ 2014/06/13 15:37:55.964545  INFO xorp_fea:28520 MFEA fea/mfea_vif.cc:198 stop ] Interface stopped Vif[register_vif] pif_index: 334 vif_index: 2 addr: 2001::1 subnet: 2001::1/128 broadcast: 2001::1 peer: :: addr: fe80::283d:bcff:fee4:3727 subnet: fe80::283d:bcff:fee4:3727/128 broadcast: fe80::283d:bcff:fee4:3727 peer: :: Flags: PIM_REGISTER UNDERLYING_VIF_UP MTU: 1500 DOWN IPv6 ENABLED
+[ 2014/06/13 15:37:55.964709 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://MFEA_6/common/0.1/get_status<
+[ 2014/06/13 15:37:55.964711  WARNING xorp_fea:28520 FEA fea/iftree.cc:682 finalize_state ] Deleting interface: r1-eth0 from tree: system-config
+[ 2014/06/13 15:37:55.964750  WARNING xorp_fea:28520 FEA fea/data_plane/ifconfig/ifconfig_parse_netlink_socket.cc:629 nlm_dellink_to_fea_cfg ] dellink, interface: pim6reg  tree: system-config
+[ 2014/06/13 15:37:56.965937  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:179 terminate ] Terminating module: mfea6
+[ 2014/06/13 15:37:56.965999  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/task.cc:1033 shutdown ] Shutting down module: interfaces
+[ 2014/06/13 15:37:56.966044  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/task.cc:1073 shutdown ] Shutdown with XRL: >finder://fea/common/0.1/shutdown<
+[ 2014/06/13 15:37:56.967480  INFO xorp_fea:28520 MFEA fea/mfea_node_cli.cc:111 stop ] CLI stopped
+[ 2014/06/13 15:37:56.967798 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://fea/common/0.1/get_status<
+[ 2014/06/13 15:37:56.968697  INFO xorp_fea:28520 MFEA fea/mfea_node.cc:1135 delete_vif ] Interface deleted: register_vif
+[ 2014/06/13 15:37:56.969496  WARNING xorp_rtrmgr:28519 LIBXORP libxorp/asyncio.cc:229 read ] read error: _fd: 13  offset: 0  total-len: 4 error: Connection reset by peer
+[ 2014/06/13 15:37:56.969665  WARNING xorp_rtrmgr:28519 LIBXORP libxorp/asyncio.cc:229 read ] read error: _fd: 10  offset: 0  total-len: 4 error: Connection reset by peer
+[ 2014/06/13 15:37:57.969066 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://fea/common/0.1/get_status<
+[ 2014/06/13 15:37:57.969211  WARNING xorp_rtrmgr:28519 XrlFinderTarget obj/x86_64-unknown-linux-gnu/xrl/targets/finder_base.cc:482 handle_finder_0_2_resolve_xrl ] Handling method for finder/0.2/resolve_xrl failed: XrlCmdError 102 Command failed Target "fea" does not exist or is not enabled.
+[ 2014/06/13 15:37:58.970314  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:179 terminate ] Terminating module: interfaces
+[ 2014/06/13 15:37:58.970465 TRACE xorp_rtrmgr RTRMGR ] Validating with XRL: >finder://fea/common/0.1/get_status<
+[ 2014/06/13 15:37:58.970669  WARNING xorp_rtrmgr:28519 XrlFinderTarget obj/x86_64-unknown-linux-gnu/xrl/targets/finder_base.cc:482 handle_finder_0_2_resolve_xrl ] Handling method for finder/0.2/resolve_xrl failed: XrlCmdError 102 Command failed Target "fea" does not exist or is not enabled.
+[ 2014/06/13 15:37:59.971805  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:179 terminate ] Terminating module: fea
+[ 2014/06/13 15:37:59.971875  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:202 terminate ] Killing module: fea
+[ 2014/06/13 15:38:01.972419  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/module_manager.cc:241 terminate_with_prejudice ] Killing module with prejudice: fea
+[ 2014/06/13 15:38:03.973465  INFO xorp_rtrmgr:28519 RTRMGR rtrmgr/task.cc:2242 run_task ] No more tasks to run
